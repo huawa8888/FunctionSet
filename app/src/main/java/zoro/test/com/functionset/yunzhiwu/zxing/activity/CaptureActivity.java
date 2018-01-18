@@ -1,5 +1,6 @@
-package com.google.zxing.activity;
+package zoro.test.com.functionset.yunzhiwu.zxing.activity;
 
+import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
@@ -14,11 +15,8 @@ import android.os.Handler;
 import android.os.Message;
 import android.os.Vibrator;
 import android.provider.MediaStore;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.text.TextUtils;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceHolder.Callback;
 import android.view.SurfaceView;
@@ -33,18 +31,19 @@ import com.google.zxing.DecodeHintType;
 import com.google.zxing.FormatException;
 import com.google.zxing.NotFoundException;
 import com.google.zxing.Result;
-import com.google.zxing.camera.CameraManager;
 import com.google.zxing.common.HybridBinarizer;
-import com.google.zxing.decoding.CaptureActivityHandler;
-import com.google.zxing.decoding.InactivityTimer;
-import com.google.zxing.decoding.RGBLuminanceSource;
 import com.google.zxing.qrcode.QRCodeReader;
-import com.google.zxing.view.ViewfinderView;
-import com.qrcodescan.R;
 
 import java.io.IOException;
 import java.util.Hashtable;
 import java.util.Vector;
+
+import zoro.test.com.functionset.R;
+import zoro.test.com.functionset.yunzhiwu.zxing.camera.CameraManager;
+import zoro.test.com.functionset.yunzhiwu.zxing.decoding.CaptureActivityHandler;
+import zoro.test.com.functionset.yunzhiwu.zxing.decoding.InactivityTimer;
+import zoro.test.com.functionset.yunzhiwu.zxing.decoding.RGBLuminanceSource;
+import zoro.test.com.functionset.yunzhiwu.zxing.view.ViewfinderView;
 
 
 /**
@@ -52,7 +51,7 @@ import java.util.Vector;
  *
  * @author Ryan.Tang
  */
-public class CaptureActivity extends AppCompatActivity implements Callback {
+public class CaptureActivity extends Activity implements Callback {
 
     private static final int REQUEST_CODE_SCAN_GALLERY = 100;
 
@@ -96,39 +95,6 @@ public class CaptureActivity extends AppCompatActivity implements Callback {
 
         //添加toolbar
 //        addToolbar();
-    }
-
-    private void addToolbar() {
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-//        ImageView more = (ImageView) findViewById(R.id.scanner_toolbar_more);
-//        assert more != null;
-//        more.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        });
-        setSupportActionBar(toolbar);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        //getMenuInflater().inflate(R.menu.scanner_menu, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-//        switch (item.getItemId()){
-//            case R.id.scan_local:
-//                //打开手机中的相册
-//                Intent innerIntent = new Intent(Intent.ACTION_GET_CONTENT); //"android.intent.action.GET_CONTENT"
-//                innerIntent.setType("image/*");
-//                Intent wrapperIntent = Intent.createChooser(innerIntent, "选择二维码图片");
-//                this.startActivityForResult(wrapperIntent, REQUEST_CODE_SCAN_GALLERY);
-//                return true;
-//        }
-        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -185,6 +151,7 @@ public class CaptureActivity extends AppCompatActivity implements Callback {
      * @return
      */
     public Result scanningImage(String path) {
+        Log.i("","path=="+path);
         if(TextUtils.isEmpty(path)){
             return null;
         }

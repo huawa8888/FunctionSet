@@ -1,4 +1,4 @@
-package com.google.zxing.encoding;
+package zoro.test.com.functionset.yunzhiwu.zxing.encoding;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;

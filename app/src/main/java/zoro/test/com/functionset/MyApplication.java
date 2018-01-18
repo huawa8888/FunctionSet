@@ -1,35 +1,32 @@
-package me.hekr.demo;
+package zoro.test.com.functionset;
 
 import android.app.Application;
+import android.content.Context;
 
-import com.igexin.sdk.PushManager;
-import com.nostra13.universalimageloader.core.ImageLoader;
-import com.nostra13.universalimageloader.core.ImageLoaderConfiguration;
-import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
+import me.hekr.sdk.HekrSDK;
 
-import me.hekr.hekrsdk.util.HekrSDK;
 
 /**
  * Created by hekr_jds on 6/30 0030.
  **/
 public class MyApplication extends Application {
 
+    private String EZappKey="42b5ccd6136c4eed858bbe2a66e95d25";
+
+    public static Context mContext;
+
 
     @Override
     public void onCreate() {
         super.onCreate();
+        // 初始化SDK
+        HekrSDK.init(this, R.raw.config);
+        // 是否开启日志，默认开启
+        HekrSDK.enableDebug(true);
+        mContext = this.getApplicationContext();
+    }
 
-        //推送服务初始化
-        PushManager.getInstance().initialize(getApplicationContext());
-        //初始化HekrSDK
-        HekrSDK.init(getApplicationContext(), R.raw.config);
-        HekrSDK.openLog(true);
-        ImageLoaderConfiguration config = new ImageLoaderConfiguration.Builder(getApplicationContext())
-                .memoryCacheExtraOptions(80, 80)
-                .denyCacheImageMultipleSizesInMemory()
-                //.writeDebugLogs()
-                .tasksProcessingOrder(QueueProcessingType.LIFO)
-                .build();
-        ImageLoader.getInstance().init(config);
+    public static MyApplication getAppContext() {
+        return (MyApplication) mContext;
     }
 }

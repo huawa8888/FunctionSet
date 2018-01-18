@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.camera;
+package zoro.test.com.functionset.yunzhiwu.zxing.camera;
 
 import android.os.IBinder;
 import android.util.Log;

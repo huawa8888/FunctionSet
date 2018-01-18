@@ -1,4 +1,4 @@
-package com.utils;
+package zoro.test.com.functionset.yunzhiwu.zxing;
 
 import android.hardware.Camera;
 

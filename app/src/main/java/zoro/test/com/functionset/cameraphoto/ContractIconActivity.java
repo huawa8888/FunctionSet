@@ -1,16 +1,18 @@
-package com.walid.photopicker;
+package zoro.test.com.functionset.cameraphoto;
 
 import android.app.Activity;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 
-import com.walid.photopicker.utils.ImageLoader;
-import com.walid.photopicker.utils.OtherUtils;
+import zoro.test.com.functionset.R;
 
 
 public class ContractIconActivity extends Activity {
     private ImageView imgControl;
     private String url;
+    private Bitmap bitmap;
 
     @Override
     public void onBackPressed() {
@@ -23,16 +25,14 @@ public class ContractIconActivity extends Activity {
         super.onCreate(arg0);
         setContentView(R.layout.activity_contract_icon);
         url = getIntent().getStringExtra("url");
+        Bundle b = getIntent().getExtras();
+        bitmap = (Bitmap) b.getParcelable("bitmap");
+        Log.i("", "bitmap==" + (bitmap == null));
         imgControl = (ImageView) findViewById(R.id.img_head);
-        int screenWidth = OtherUtils.getWidthInPx(getApplicationContext());
-        ImageLoader.getInstance(getApplication()).display(url, imgControl,screenWidth,screenWidth);
-//        imgControl.setOnViewTapListener(new PhotoViewAttacher.OnViewTapListener() {
-//
-//            @Override
-//            public void onViewTap(View arg0, float arg1, float arg2) {
-//                    finish();
-//            }
-//        });
+//        Glide.with(this)
+//                .load(url)
+//                .into(imgControl);
+        imgControl.setImageBitmap(bitmap);
     }
 
 }

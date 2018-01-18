@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *******************************************************************************/
-package com.mob.linyl.view.photoview;
+package zoro.test.com.functionset.phonephotoshow.photoview;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -34,9 +34,9 @@ import android.view.animation.Interpolator;
 import android.widget.ImageView;
 import android.widget.ImageView.ScaleType;
 
-import com.mob.linyl.view.photoview.scrollerproxy.ScrollerProxy;
-
 import java.lang.ref.WeakReference;
+
+import zoro.test.com.functionset.phonephotoshow.photoview.scrollerproxy.ScrollerProxy;
 
 import static android.view.MotionEvent.ACTION_CANCEL;
 import static android.view.MotionEvent.ACTION_DOWN;
@@ -122,7 +122,7 @@ public class PhotoViewAttacher implements IPhotoView, View.OnTouchListener,
 
     // Gesture Detectors
     private GestureDetector mGestureDetector;
-    private com.mob.linyl.view.photoview.GestureDetector mScaleDragDetector;
+    private zoro.test.com.functionset.phonephotoshow.photoview.GestureDetector mScaleDragDetector;
 
     // These are set so we don't keep allocating them on the heap
     private final Matrix mBaseMatrix = new Matrix();

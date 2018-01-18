@@ -1,9 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="zoro.test.com.functionset.yunzhiwu.YunZhiWu">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/getPhotoCode"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="获取图形验证码" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/setPhotoCode"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:background="@null"
+                android:hint="输入图形验证码" />
+
+            <ImageView
+                android:id="@+id/photoCode"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:scaleType="fitXY" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/comfirmPhotoCode"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="验证图形验证码" />
+
+        <EditText
+            android:id="@+id/setPhoneNumber"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:hint="输入手机号" />
+
+        <Button
+            android:id="@+id/getPhoneCode"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="获取短信验证码" />
+
+        <EditText
+            android:id="@+id/setPhoneCode"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@null"
+            android:hint="输入短信验证码" />
+
+        <Button
+            android:id="@+id/comfirmPhoneCode"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="验证手机验证码" />
+
+        <Button
+            android:id="@+id/phoneRegiste"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="注册手机" />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="登陆" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+    <Button
+        android:id="@+id/getwifiSsid"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="获取Wi-Fi名称： " />
+
+    <TextView
+        android:id="@+id/showwifiName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center" />
+
+    <EditText
+        android:id="@+id/setPassword"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@null" />
+
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@null"
+            android:id="@+id/setNumber"/>
+        <Button
+            android:id="@+id/convertNumber"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="获取转换值"/>
+        <TextView
+            android:id="@+id/showNumber"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:gravity="center"/>
+    </LinearLayout>
+</LinearLayout>

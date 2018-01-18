@@ -1,4 +1,4 @@
-package com.walid.photopicker.adapters;
+package zoro.test.com.functionset.phonephotoshow;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,12 +8,11 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.walid.photopicker.R;
-import com.walid.photopicker.beans.PhotoFloder;
-import com.walid.photopicker.utils.ImageLoader;
-import com.walid.photopicker.utils.OtherUtils;
+import com.bumptech.glide.Glide;
 
 import java.util.List;
+
+import zoro.test.com.functionset.R;
 
 /**
  * Author: walid
@@ -70,7 +69,10 @@ public class FloderAdapter extends BaseAdapter {
         }
         holder.floderNameTV.setText(floder.getName());
         holder.photoNumTV.setText(floder.getPhotoList().size() + "张");
-        ImageLoader.getInstance(context).display(floder.getPhotoList().get(0).getPath(), holder.photoIV, photoSize, photoSize);
+        Glide.with(context)
+                .load(floder.getPhotoList().get(0).getPath())
+                .override(photoSize,photoSize)
+                .into(holder.photoIV);
         return convertView;
     }
 

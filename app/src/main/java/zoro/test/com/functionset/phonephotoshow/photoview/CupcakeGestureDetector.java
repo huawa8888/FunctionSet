@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *******************************************************************************/
-package com.mob.linyl.view.photoview;
+package zoro.test.com.functionset.phonephotoshow.photoview;
 
 import android.content.Context;
 import android.view.MotionEvent;

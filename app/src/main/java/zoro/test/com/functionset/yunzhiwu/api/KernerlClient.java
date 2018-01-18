@@ -1,6 +1,4 @@
-package com.mob.linyl.api;
-
-import com.mob.linyl.Config;
+package zoro.test.com.functionset.yunzhiwu.api;
 
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava.RxJavaCallAdapterFactory;
@@ -15,7 +13,7 @@ public class KernerlClient {
 
     public KernerlClient() {
         Retrofit retrofit1 = new Retrofit.Builder()
-                .baseUrl(Config.getLylUrl())
+                .baseUrl("https://user-openapi.hekr.me/")
                 .client(OkHttpManager.getInstance())
                 .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
                 .addConverterFactory(GsonConverterFactory.create())

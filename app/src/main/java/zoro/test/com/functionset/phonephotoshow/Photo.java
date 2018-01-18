@@ -12,6 +12,15 @@ public class Photo implements Serializable {
 
     private int id;
     private String path;  //路径
+    private Boolean checked;
+
+    public Boolean getChecked() {
+        return checked;
+    }
+
+    public void setChecked(Boolean checked) {
+        this.checked = checked;
+    }
 
     public Photo(String path) {
         this.path = path;

@@ -1,4 +1,4 @@
-package com.walid.photopicker.utils;
+package zoro.test.com.functionset.phonephotoshow;
 
 import android.content.Context;
 import android.content.pm.PackageInfo;
@@ -11,10 +11,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.Date;
 
-/**
- * Author: walid
- * Date ： 2016/4/28 16:36
- */
+
 public class OtherUtils {
 
 	/**

@@ -1,4 +1,4 @@
-package com.mob.linyl.view.photoview;
+package zoro.test.com.functionset.phonephotoshow.photoview;
 
 /*******************************************************************************
  * Copyright 2011, 2012 Chris Banes.

@@ -1,12 +1,9 @@
-package com.mob.linyl.api;
+package zoro.test.com.functionset.yunzhiwu.api;
 
 
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.text.TextUtils;
-
-import com.mob.linyl.Config;
-import com.mob.linyl.base.MyApplication;
 
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -15,6 +12,7 @@ import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import zoro.test.com.functionset.MyApplication;
 
 /**
  * Created by wukewei on 16/5/26.
@@ -29,10 +27,10 @@ public class OkHttpManager {
             synchronized (OkHttpManager.class) {
                 if (mOkHttpClient == null) {
                     mOkHttpClient = new OkHttpClient.Builder()
-                            .readTimeout(Config.HTTP_CONNECT_TIMEOUT, TimeUnit.SECONDS)
+                            .readTimeout(15, TimeUnit.SECONDS)
                             .addInterceptor(new HttpCacheInterceptor())
-                            .connectTimeout(Config.HTTP_CONNECT_TIMEOUT, TimeUnit.SECONDS)
-                            .writeTimeout(Config.HTTP_CONNECT_TIMEOUT, TimeUnit.SECONDS)
+                            .connectTimeout(15, TimeUnit.SECONDS)
+                            .writeTimeout(15, TimeUnit.SECONDS)
                             .build();
                 }
             }
@@ -45,9 +43,9 @@ public class OkHttpManager {
             synchronized (OkHttpManager.class) {
                 if (mOkHttpClient2 == null) {
                     mOkHttpClient2 = new OkHttpClient.Builder()
-                            .readTimeout(Config.HTTP_CONNECT_TIMEOUT, TimeUnit.SECONDS)
-                            .connectTimeout(Config.HTTP_CONNECT_TIMEOUT, TimeUnit.SECONDS)
-                            .writeTimeout(Config.HTTP_CONNECT_TIMEOUT, TimeUnit.SECONDS)
+                            .readTimeout(15, TimeUnit.SECONDS)
+                            .connectTimeout(15, TimeUnit.SECONDS)
+                            .writeTimeout(15, TimeUnit.SECONDS)
                             .build();
                 }
             }
@@ -69,11 +67,12 @@ public class OkHttpManager {
             return chain.proceed(request);
         }
     }
-    public static String getShareString(String name){
+
+    public static String getShareString(String name) {
         String str = "";
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(MyApplication.getAppContext());
-        if(sp != null){
-            str = sp.getString(name,"");
+        if (sp != null) {
+            str = sp.getString(name, "");
         }
         return str;
     }

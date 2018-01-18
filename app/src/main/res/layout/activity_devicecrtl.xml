@@ -1,6 +1,103 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/login"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="登陆" />
+
+            <Button
+                android:id="@+id/getPinCode"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="获取pinCode" />
+
+            <Button
+                android:id="@+id/getdevices"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="获取绑定设备"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/bindGetWay"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="绑定网关" />
+
+            <Button
+                android:id="@+id/deleteGetWay"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="删除网关" />
+
+            <Button
+                android:id="@+id/bindGetWaySubDevice"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="绑定网关子设备" />
+
+            <Button
+                android:id="@+id/deleteGetWaySubDevice"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="删除网关下子设备" />
+
+            <Button
+                android:id="@+id/bindWifiDevice"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="绑定Wi-Fi模块" />
+
+            <Button
+                android:id="@+id/deleteWifiDevice"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="删除Wi-Fi设备" />
+
+            <Button
+                android:id="@+id/openSocket"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="打开插座" />
+
+            <Button
+                android:id="@+id/closeSocket"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="关闭插座" />
+
+            <Button
+                android:id="@+id/logout"
+                android:layout_width="150dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:text="用户退出" />
+
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>

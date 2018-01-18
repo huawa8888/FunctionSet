@@ -1,5 +1,6 @@
-package com.mob.linyl.view.photoview;
+package zoro.test.com.functionset.phonephotoshow.photoview;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Matrix;
@@ -29,6 +30,7 @@ import com.facebook.imagepipeline.request.ImageRequest;
 import com.facebook.imagepipeline.request.ImageRequestBuilder;
 
 
+@SuppressLint("AppCompatCustomView")
 public class PhotoView extends ImageView implements IPhotoView,ImageDownloadListener {
 
     private PhotoViewAttacher mAttacher;
@@ -253,7 +255,7 @@ public class PhotoView extends ImageView implements IPhotoView,ImageDownloadList
     }
 
     @Override
-    public com.mob.linyl.view.photoview.PhotoViewAttacher.OnViewTapListener getOnViewTapListener() {
+    public PhotoViewAttacher.OnViewTapListener getOnViewTapListener() {
         return mAttacher.getOnViewTapListener();
     }
 
@@ -325,6 +327,7 @@ public class PhotoView extends ImageView implements IPhotoView,ImageDownloadList
         super.onAttachedToWindow();
     }
 
+    @SuppressLint("MissingSuperCall")
     @Override
     protected boolean verifyDrawable(Drawable dr) {
         if (dr == mDraweeHolder.getHierarchy().getTopLevelDrawable()) {

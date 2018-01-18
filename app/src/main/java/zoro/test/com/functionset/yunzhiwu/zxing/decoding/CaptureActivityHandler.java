@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.decoding;
+package zoro.test.com.functionset.yunzhiwu.zxing.decoding;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -27,12 +27,13 @@ import android.util.Log;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.Result;
-import com.google.zxing.activity.CaptureActivity;
-import com.google.zxing.camera.CameraManager;
-import com.google.zxing.view.ViewfinderResultPointCallback;
-import com.qrcodescan.R;
 
 import java.util.Vector;
+
+import zoro.test.com.functionset.R;
+import zoro.test.com.functionset.yunzhiwu.zxing.activity.CaptureActivity;
+import zoro.test.com.functionset.yunzhiwu.zxing.camera.CameraManager;
+import zoro.test.com.functionset.yunzhiwu.zxing.view.ViewfinderResultPointCallback;
 
 
 /**
@@ -83,11 +84,13 @@ public final class CaptureActivityHandler extends Handler {
         Log.d(TAG, "Got decode succeeded message");
         state = State.SUCCESS;
         Bundle bundle = message.getData();
-        
+
+        Log.i("","message====="+message.toString());
+
         /***********************************************************************/
         Bitmap barcode = bundle == null ? null :
             (Bitmap) bundle.getParcelable(DecodeThread.BARCODE_BITMAP);//���ñ����߳�
-        
+
         activity.handleDecode((Result) message.obj, barcode);//���ؽ��
         /***********************************************************************/
         break;

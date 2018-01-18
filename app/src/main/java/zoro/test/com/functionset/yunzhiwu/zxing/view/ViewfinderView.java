@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.view;
+package zoro.test.com.functionset.yunzhiwu.zxing.view;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -33,11 +33,12 @@ import android.util.AttributeSet;
 import android.view.View;
 
 import com.google.zxing.ResultPoint;
-import com.google.zxing.camera.CameraManager;
-import com.qrcodescan.R;
 
 import java.util.Collection;
 import java.util.HashSet;
+
+import zoro.test.com.functionset.R;
+import zoro.test.com.functionset.yunzhiwu.zxing.camera.CameraManager;
 
 
 /**

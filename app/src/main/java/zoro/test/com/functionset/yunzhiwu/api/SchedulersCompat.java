@@ -1,4 +1,4 @@
-package com.mob.linyl.api;
+package zoro.test.com.functionset.yunzhiwu.api;
 
 import rx.Observable;
 import rx.android.schedulers.AndroidSchedulers;

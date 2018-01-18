@@ -1,4 +1,4 @@
-package com.mob.linyl.view.photoview;
+package zoro.test.com.functionset.phonephotoshow.photoview;
 
 import android.graphics.RectF;
 import android.view.GestureDetector;

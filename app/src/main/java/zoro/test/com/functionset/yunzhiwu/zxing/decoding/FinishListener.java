@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.decoding;
+package zoro.test.com.functionset.yunzhiwu.zxing.decoding;
 
 import android.app.Activity;
 import android.content.DialogInterface;

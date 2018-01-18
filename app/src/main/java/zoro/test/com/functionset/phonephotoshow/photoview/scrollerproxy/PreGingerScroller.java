@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *******************************************************************************/
-package com.mob.linyl.view.photoview.scrollerproxy;
+package zoro.test.com.functionset.phonephotoshow.photoview.scrollerproxy;
 
 import android.content.Context;
 import android.widget.Scroller;

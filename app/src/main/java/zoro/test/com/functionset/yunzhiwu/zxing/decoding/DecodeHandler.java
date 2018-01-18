@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.google.zxing.decoding;
+package zoro.test.com.functionset.yunzhiwu.zxing.decoding;
 
 import android.os.Bundle;
 import android.os.Handler;
@@ -27,13 +27,14 @@ import com.google.zxing.DecodeHintType;
 import com.google.zxing.MultiFormatReader;
 import com.google.zxing.ReaderException;
 import com.google.zxing.Result;
-import com.google.zxing.activity.CaptureActivity;
-import com.google.zxing.camera.CameraManager;
-import com.google.zxing.camera.PlanarYUVLuminanceSource;
 import com.google.zxing.common.HybridBinarizer;
-import com.qrcodescan.R;
 
 import java.util.Hashtable;
+
+import zoro.test.com.functionset.R;
+import zoro.test.com.functionset.yunzhiwu.zxing.activity.CaptureActivity;
+import zoro.test.com.functionset.yunzhiwu.zxing.camera.CameraManager;
+import zoro.test.com.functionset.yunzhiwu.zxing.camera.PlanarYUVLuminanceSource;
 
 
 final class DecodeHandler extends Handler {

@@ -3,7 +3,6 @@ package zoro.test.com.functionset.scroller;
 import android.content.Context;
 import android.support.v4.view.ViewConfigurationCompat;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewConfiguration;
@@ -81,12 +80,10 @@ public class ScrollerLayout extends ViewGroup {
                 View childView = getChildAt(i);
                 // 为ScrollerLayout中的每一个子控件在水平方向上进行布局
                 childView.layout(i * childView.getMeasuredWidth(), 0, (i + 1) * childView.getMeasuredWidth(), childView.getMeasuredHeight());
-                Log.i("", "leftBorder==" + childView.getMeasuredWidth());
             }
             // 初始化左右边界值
             leftBorder = getChildAt(0).getLeft();
             rightBorder = getChildAt(getChildCount() - 1).getRight();
-            Log.i("", "leftBorder==" + leftBorder + "  rightBorder==" + rightBorder);
         }
     }
 
@@ -128,6 +125,7 @@ public class ScrollerLayout extends ViewGroup {
                 break;
             case MotionEvent.ACTION_UP:
                 // 当手指抬起时，根据当前的滚动值来判定应该滚动到哪个子控件的界面
+                int i = getWidth();
                 int targetIndex = (getScrollX() + getWidth() / 2) / getWidth();
                 int dx = targetIndex * getWidth() - getScrollX();
                 // 第二步，调用startScroll()方法来初始化滚动数据并刷新界面

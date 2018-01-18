@@ -1,4 +1,4 @@
-package com.mob.linyl.view.photoview;
+package zoro.test.com.functionset.phonephotoshow.photoview;
 
 /**
  * Created by 06peng on 15/6/26.
