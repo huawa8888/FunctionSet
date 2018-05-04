@@ -39,10 +39,10 @@ dependencies {
         exclude group: 'com.android.support'
     }
     compile('com.hikvision.ezviz:ezuikit:1.3') {
-        exclude (group:'javax.jmdns',module:'jmdns')
+        exclude(group: 'javax.jmdns', module: 'jmdns')
     }
     compile('com.hikvision.ezviz:ezviz-sdk:4.7.0') {
-        exclude (group:'javax.jmdns',module:'jmdns')
+        exclude(group: 'javax.jmdns', module: 'jmdns')
     }
     compile 'com.google.zxing:core:3.3.0'
     compile 'io.reactivex:rxjava:1.0.14'
@@ -53,4 +53,5 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha8'
     testCompile 'junit:junit:4.12'
     compile 'com.alibaba:fastjson:1.2.39'
+    compile files('src/shunzhou.jar')
 }
